@@ -1,0 +1,87 @@
+.footer
+  padding: 90px 0
+  background-color: $black
+
+  &__title
+    margin-bottom: 7.5rem
+    text-transform: uppercase
+    color: $white
+    font-size: 4.5rem
+    font-weight: 700
+    letter-spacing: -1.13px
+
+  &__address
+    max-width: 35.6rem
+    margin-bottom: 6rem
+    color: $white
+
+  &__contacts
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: $white
+
+    &-tels
+      position: relative
+      flex: 1 0 50%
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 3px
+        height: 100%
+        background-color: $blue
+
+      a
+        margin-bottom: 2rem
+        color: $white
+        font-size: 3rem
+        line-height: 1
+
+        &:last-child
+          margin-bottom: 0
+
+    &-emails
+      padding-left: 3.5rem
+      flex: 1 0 50%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      color: $light-blue
+
+      a
+        color: $light-blue
+
+        &:last-child
+          margin-top: 3rem
+
+
+@media (max-width: 1199px)
+  .footer
+    &__contacts
+      margin-bottom: 4rem
+
+    &__form
+      display: flex
+      flex-direction: column
+
+@media (max-width: 767px)
+  .footer
+
+    &__contacts
+      flex-direction: column
+      align-items: flex-start
+
+      &-tels
+        margin-bottom: 3rem
+
+        &::before
+          content: none
+
+      &-emails
+        padding-left: 0

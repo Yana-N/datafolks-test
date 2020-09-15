@@ -1,0 +1,85 @@
+html
+  font-size: 62.5%
+
+body
+  font-family: $dinpro
+  font-size: $fontsize
+  min-width: 320px
+  position: relative
+  line-height: 1.5
+  overflow-x: hidden
+  color: $gray3
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $black
+  color: #fff
+
+input, textarea
+  outline: none
+
+  &:focus:required:invalid
+    border-color: red
+
+  &:required:valid
+    border-color: green
+
+p
+  margin-bottom: 3rem
+
+  &:last-child
+    margin-bottom: 0
+
+img
+  max-width: 100%
+
+.title
+  font-size: 4.6rem
+  font-weight: 400
+  letter-spacing: -1.15px
+  line-height: 1
+
+.btn
+  display: inline-block
+  vertical-align: middle
+  color: $gray3
+  text-decoration: none
+  text-transform: uppercase
+  background: 0 0
+  border: 3px solid $dark-blue
+  font-family: inherit
+  font-size: 1.8rem
+  font-weight: 700
+  letter-spacing: -0.45px
+  line-height: 1
+  cursor: pointer
+  transition: all .5s
+
+  &--xl
+    padding: 2.4rem 11.3rem
+
+  &--sm
+    padding: 2.4rem 6.2rem
+
+  &--dark
+    color: $gray3
+    border-color: $dark-blue
+
+    &:hover
+      border-color: lighten($gray3, 30%)
+      color: lighten($gray3, 30%)
+
+  &--light
+    color: $white
+    border-color: $white
+
+    &:hover
+      border-color: darken($white, 30%)
+      color: darken($white, 30%)
+
+
+@media (max-width: 767px)
+  html
+    font-size: 45%
